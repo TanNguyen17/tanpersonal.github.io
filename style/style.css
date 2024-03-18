@@ -1,0 +1,123 @@
+@keyframes hue-animation {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+body {
+    background-color: #030637;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #030637;
+    color: white;
+}
+.header > h2 {
+    display: flex;
+    flex-basis: 60%;
+    font-size: 25px;
+    font-style: italic;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 100px;
+    padding-left: 40px;
+}
+.header > nav {
+    display: flex;
+    flex-basis: 40%;
+    margin-right: 30px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 10px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    z-index: -10;
+    font-family: "Madimi";
+}
+
+main .home {
+    border-bottom: #F0F3FF solid 1px;
+}
+
+main .introduce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50%;
+    color: white;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+main .personal-image {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.personal-image img {
+    width: 300px;
+    position: absolute;
+}
+.circle {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    border-radius: 50%;
+}
+.circle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #836FFF, #15F5BA 20%, #F0F3FF);
+    border-radius: inherit;
+    z-index: -1;
+    margin: -5px;
+    animation: hue-animation 3s ease-in-out infinite alternate;
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    left: -5px;
+    bottom: -5px;
+    background: white;
+    border-radius: inherit;
+    box-sizing: border-box;
+    z-index: -2;
+    margin: -5px;
+    filter: blur(16px);
+}
+
+#models img {
+    width: auto;
+    height: 280px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+
