@@ -9,47 +9,84 @@
 
 body {
     background-color: #030637;
-    height: 100vh;
-    width: 100vw;
+    max-width: 100vw;
     margin: 0;
+    padding: 0;
 }
 
 .header {
     display: flex;
+    background-color: #030637;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 30px 30px;
+}
+
+p, li, a, button {
     font-family: "JetBrains Mono", monospace;
     font-optical-sizing: auto;
     font-style: normal;
-    background-color: #030637;
     color: white;
+    text-decoration: none;
 }
-.header > h2 {
-    display: flex;
-    flex-basis: 60%;
+
+header p {
+    cursor: pointer;
     font-size: 25px;
-    font-style: italic;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 100px;
-    padding-left: 40px;
+    font-weight: bold;
 }
-.header > nav {
-    display: flex;
-    flex-basis: 40%;
-    margin-right: 30px;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 10px;
+
+.nav {
+    list-style: none;
 }
+.nav li {
+    display: inline-block;
+    padding: 0px 30px;
+}
+.nav li a {
+    transition: all 0.3s ease 0s;
+}
+.nav li .active, .nav li a:hover {
+    color: red;
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 12px;
+
+}
+
+button {
+    padding: 9px 25px;
+    background-color: rgb(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: white;
+    color: red;
+}
+
+
 main {
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    z-index: -10;
+    padding-bottom: 40px;
+    margin:  50px 80px;
     font-family: "Madimi";
 }
 
 main .home {
-    border-bottom: #F0F3FF solid 1px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    border-bottom: #15F5BA solid 2px;
+}
+
+main .home h2 {
+    margin: 0;
 }
 
 main .introduce {
@@ -57,14 +94,11 @@ main .introduce {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    flex-basis: 50%;
     color: white;
-    margin-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 main .personal-image {
     display: flex;
-
     justify-content: center;
     align-items: center;
 }
@@ -108,12 +142,32 @@ main .personal-image {
     filter: blur(16px);
 }
 
-#models img {
-    width: auto;
-    height: 280px;
+main .aboutme {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: 200px;
 }
-a {
-    text-decoration: none;
+main .aboutme .description {
+    flex-basis: 50%;
+}
+main .aboutme .descrip-image {
+    flex-basis: 50%;
+}
+main .aboutme img {
+    width: 500px;
+}
+main .aboutme img:nth-child(odd) {
+    position: absolute;
+}
+main .aboutme img:nth-child(even) {
+    position: relative;
+    top: 150px;
+    left: 100px;
+}
+.aboutme h2 {
+    text-align: center;
+    flex-basis: 100%;
     color: white;
 }
 
