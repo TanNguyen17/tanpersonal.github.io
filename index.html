@@ -8,20 +8,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Tan's Personal Website</title>
 </head>
 <body>
-    <header class="header">
-        <p>Tan</p>
-        <nav>
+    <header class="header" id="header">
+        <div class="mobile-nav-icon">☰</div>
+        <p>Tanneban</p>
+        <nav class="navigation">
             <ul class="nav">
-                <li class="active"><a>Home</a></li>
-                <li><a>About me</a></li>
-                <li><a>My projects</a></li>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#aboutme">About me</a></li>
+                <li><a href="#project">My projects</a></li>
                 <li><a>My skills</a></li>
             </ul>
         </nav>
         <button>Contact me</button>
+        <nav class="menu-nav">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#aboutme">About me</a></li>
+                <li><a href="#project">My projects</a></li>
+                <li><a>My skills</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="home" id="home">
@@ -35,17 +45,70 @@
             </div>
         </div>
         <div class="aboutme" id="aboutme">
-            <h2>Something about myself</h2>
-            <section class="description">
-                <p>I'm a passionate innovator with a head for the clouds! When I'm not tinkering away on my latest project, I'm often found soaring through the skies as a pilot.</p>
-            </section>
-            <section class="descrip-image">
-                <img src="image/R.jpg" alt="innovation">
-            </section>
+            <div class="description">
+                <h2>Who am I?</h2>
+                <p>I'm a boy with a great passion for science and technology. From a young age, I have always been fascinated by the workings of electronic devices, particularly computers. I have spent countless hours exploring ways to create smart devices and program them to serve our needs. My greatest desire is to be able to apply technology to address the challenges that humanity is currently facing and will encounter in the future.</p>
+            </div>
+            <div class="descrip-image">
+                <img src="image/tanimage.jpg" alt="tanimage">
+            </div>
         </div>
-        <div class="projects" id="projects">
-            
+        <div class="project" id="project">
+            <h1>My Projects</h1>
+            <div class="container">
+                <div class="myproject">
+                    <img src="image/project.png" alt="myproject">
+                    <section class="project-description">
+                        <h2>Vietnam Wordle</h2>
+                        <p>Edu Research Festival - RESFES is a national research contest for students learning in FPT Education. I and my partner tried our best to get over the regional round and be 1 of 2 teams in the South joined the national finals.</p>
+                    </section>
+                </div>
+                <div class="myproject">
+                    <img src="image/project.png" alt="myproject">
+                    <section class="project-description">
+                        <h2>Vietnam Wordle</h2>
+                        <p>Edu Research Festival - RESFES is a national research contest for students learning in FPT Education. I and my partner tried our best to get over the regional round and be 1 of 2 teams in the South joined the national finals.</p>
+                    </section>
+                </div>
+                <div class="myproject">
+                    <img src="image/project.png" alt="myproject">
+                    <section class="project-description">
+                        <h2>Vietnam Wordle</h2>
+                        <p>Edu Research Festival - RESFES is a national research contest for students learning in FPT Education. I and my partner tried our best to get over the regional round and be 1 of 2 teams in the South joined the national finals.</p>
+                    </section>
+                </div>
+                <div class="myproject">
+                    <img src="image/project.png" alt="myproject">
+                    <section class="project-description">
+                        <h2>Vietnam Wordle</h2>
+                        <p>Edu Research Festival - RESFES is a national research contest for students learning in FPT Education. I and my partner tried our best to get over the regional round and be 1 of 2 teams in the South joined the national finals.</p>
+                    </section>
+                </div>
+                <div class="myproject">
+                    <img src="image/project.png" alt="myproject">
+                    <section class="project-description">
+                        <h2>Vietnam Wordle</h2>
+                        <p>Edu Research Festival - RESFES is a national research contest for students learning in FPT Education. I and my partner tried our best to get over the regional round and be 1 of 2 teams in the South joined the national finals.</p>
+                    </section>
+                </div>
+                <div class="myproject">
+                    <img src="image/project.png" alt="myproject">
+                    <section class="project-description">
+                        <h2>Vietnam Wordle</h2>
+                        <p>Edu Research Festival - RESFES is a national research contest for students learning in FPT Education. I and my partner tried our best to get over the regional round and be 1 of 2 teams in the South joined the national finals.</p>
+                    </section>
+                </div>
+            </div>    
         </div>
     </main>
+    <footer>
+        <h4>© Copyright 2023 by Nana</h4>
+    </footer>
+
+    <div class="back-to-top">
+        <a href="index.html#header">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+    </div>
 </body>
 </html>
