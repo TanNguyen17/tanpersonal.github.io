@@ -21,27 +21,8 @@ body {
     padding: 0;
 }
 
-.mobile-nav-icon {
-    display: none;
-    width: 50px;
-    height: 50px;
-    background-color:#e42a20;
-    text-align: center;
-    margin: auto 0px;
-    padding-top: 5px;
-    font-size: 1.7rem;
-    cursor: pointer;
-}
-
-.menu-nav {
-    background-color:#e42a20;
+.fa-bars {
     color: white;
-    margin: 10px;
-    padding: 10px;
-    display: none;
-}
-.menu-nav ul {
-    list-style: none;
 }
 
 .header {
@@ -64,6 +45,13 @@ header p {
     cursor: pointer;
     font-size: 25px;
     font-weight: bold;
+}
+
+#toggle, label {
+    display: none;
+    font-size: 1.5rem;
+    padding: 1%;
+    background-color: rgb(0, 136, 169, 1);
 }
 
 .navigation {
@@ -99,6 +87,7 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    font-weight: bold;
 }
 
 button:hover {
@@ -290,34 +279,39 @@ main .project {
         padding: 0;
     }
     .header p{
-      padding-left: 10%;  
+      padding-left: 10%;   
     }
-    .navivagtion {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        justify-content: start;
-        height: auto;
-        padding: 5px 20px;
-    } 
-    .navigation ul{
-        flex-direction: column;
-        margin-top: 20px;
+    .header {
+        flex-wrap: wrap;
     }
+    .nav {
+
+        max-height: 100%;
+        flex-direction: column;
+        padding: 10px 0px;
+    }
+    
     .navigation {
         display: none;
     }
-    .mobile-nav-icon {
-        display: block;
+
+    label {
+        display: inline-flex;
     }
-    .mobile-nav-icon:hover+.menu-nav {
+
+    #toggle:checked~.navigation{
         display: block;
-        position: absolute;
+        flex-basis: 100%;
+        max-height: 100%;
+        order: 4;
+        background-color: rgb(0, 136, 169, 1);
+        border-radius: 0;
+        justify-content: start;
+        align-items: start;
+        padding: 0;
+        margin: 0;
     }
-    .menu-nav:hover {
-        display: block;
-        position: absolute;
-    }
+
     .myproject {
         width: calc(80% - 40px);
         margin-bottom: 40px;
